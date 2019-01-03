@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 # Evaluating
 - update the eval cfg file in `code/dataset/cfg/dataset_eval.yml` and adapt the path of `NET_G` to point to the model you want to use (default path is to the pretrained models linked below)
-- run `sh sample.sh mnist/clevr/coco-stackgan-1/coco-stackgan-2/coco-attngan` to generate images using the specified model
+- run `sh sample.sh mnist/clevr/coco-stackgan-2/coco-attngan` to generate images using the specified model
 
 # Pretrained Models
 - pretrained model for Multi-MNIST: [download](https://www.inf.uni-hamburg.de/en/inst/ab/wtm/research/software/multiple-objects-gan/model-multi-mnist.zip), save to `models` and extract
