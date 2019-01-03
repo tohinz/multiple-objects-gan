@@ -394,7 +394,8 @@ class GANTrainer(object):
             elif cfg.STAGE == 2:
                 inputs = (txt_embedding, noise, transf_matrices_inv_batch,
                           transf_matrices_s2_batch, transf_matrices_inv_s2_batch, label_one_hot_batch)
-            _, fake_imgs, mu, logvar, _ = nn.parallel.data_parallel(netG, inputs, self.gpus)
+            with torch.no_grad():
+                _, fake_imgs, mu, logvar, _ = nn.parallel.data_parallel(netG, inputs, self.gpus)
 
             data_img = torch.FloatTensor(10, 3, imsize, imsize).fill_(0)
             data_img[0] = val_image
