@@ -17,7 +17,8 @@ pip install -r requirements.txt
 
 # Data
 - Multi-MNIST:
-    - [download](https://www.inf.uni-hamburg.de/en/inst/ab/wtm/research/software/multiple-objects-gan/data-multi-mnist.zip) our data, extract and save it to `data/`
+    - contains the three data sets used in the paper: normal (three digits per image), split_digits (0-4 in top half of image, 5-9 in bottom half), and bottom_half_empty (no digits in bottom half of the image)
+    - [download](https://www.inf.uni-hamburg.de/en/inst/ab/wtm/research/software/multiple-objects-gan/data-multi-mnist.zip) our data, save it to `data/` and extract
 - CLEVR:
     - Main: [download](https://www.inf.uni-hamburg.de/en/inst/ab/wtm/research/software/multiple-objects-gan/data-clevr-main.zip) our data, extract and save it to `data/`
     - CoGenT: [download](https://www.inf.uni-hamburg.de/en/inst/ab/wtm/research/software/multiple-objects-gan/data-clevr-cogent.zip) our data, extract and save it to `data/`
