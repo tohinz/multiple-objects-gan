@@ -32,6 +32,7 @@ pip install -r requirements.txt
 - to start training run `sh train.sh data gpu-ids` where you choose the desired data set and architecture (mnist/clevr/coco-stackgan-1/coco-stackgan-2/coco-attngan) and which/how many gpus to train on
 - e.g. to train on the Multi-MNIST data set on one GPU: `sh train.sh mnist 0`
 - e.g. to train the AttnGAN architecture on the MS-COCO data set on three GPUs: `sh train.sh coco-attngan 0,1,2`
+- make sure the DATA_DIR in the respective `code/dataset/cfg/dataset_eval.yml` points to the correct path
 - results are stored in `output/`
 
 # Evaluating
