@@ -24,7 +24,7 @@ pip install -r requirements.txt
     - CoGenT: [download](https://www.inf.uni-hamburg.de/en/inst/ab/wtm/research/software/multiple-objects-gan/data-clevr-cogent.zip) our data, save it to `data/` and extract
 - MS-COCO:
     - [download](https://www.inf.uni-hamburg.de/en/inst/ab/wtm/research/software/multiple-objects-gan/data-ms-coco.zip) our preprocessed data (bounding boxes and bounding box labels), save it to `data/` and extract
-    - obtain the train and validation images from the 2014 split [here](http://cocodataset.org/#download), extract and save them in `data/coco/train/` and `data/coco/test/`
+    - obtain the train and validation images from the 2014 split [here](http://cocodataset.org/#download), extract and save them in `data/MS-COCO/train/` and `data/MS-COCO/test/`
     - for the StackGAN architecture: obtain the preprocessed char-CNN-RNN text embeddings from [here](https://github.com/hanzhanggit/StackGAN-Pytorch)
     - for the AttnGAN architecture: obtain the preprocessed metadata and the pre-trained DAMSM model from [here](https://github.com/taoxugit/AttnGAN)
 
