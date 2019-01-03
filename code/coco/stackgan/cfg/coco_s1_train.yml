@@ -1,0 +1,31 @@
+CONFIG_NAME: 'stageI'
+
+DATASET_NAME: 'coco'
+EMBEDDING_TYPE: 'cnn-rnn'
+GPU_ID: '0,1'
+Z_DIM: 100
+DATA_DIR: "/data/hinz/data/coco"
+IMG_DIR: "/data/hinz/data/coco/train/train2014"
+#DATA_DIR: '../../data/coco'
+IMSIZE: 64
+WORKERS: 12
+STAGE: 1
+USE_BBOX_LAYOUT: True
+TRAIN:
+    FLAG: True
+    BATCH_SIZE: 128
+    MAX_EPOCH: 120
+    LR_DECAY_EPOCH: 20
+    SNAPSHOT_INTERVAL: 10
+    DISCRIMINATOR_LR: 0.0002
+    GENERATOR_LR: 0.0002
+    COEFF:
+      KL: 2.0
+
+GAN:
+    CONDITION_DIM: 128
+    DF_DIM: 96
+    GF_DIM: 192
+
+TEXT:
+    DIMENSION: 1024

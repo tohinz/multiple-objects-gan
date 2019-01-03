@@ -1,0 +1,21 @@
+DATASET_NAME: 'clevr'
+GPU_ID: '0,1'
+Z_DIM: 100
+DATA_DIR: "/informatik3/wtm/home/hinz/Documents/Papers/multiple-object-generation/code/Multiple-Objects-GAN-CLEVR/clevr/cogen"
+#DATA_DIR: '../../data/clevr_custom/cogen'
+IMSIZE: 64
+WORKERS: 4
+USE_BBOX_LAYOUT: True
+TRAIN:
+    FLAG: True
+    BATCH_SIZE: 128
+    MAX_EPOCH: 40
+    LR_DECAY_EPOCH: 10
+    SNAPSHOT_INTERVAL: 10
+    DISCRIMINATOR_LR: 0.0002
+    GENERATOR_LR: 0.0002
+
+GAN:
+    CONDITION_DIM: 16
+    DF_DIM: 48
+    GF_DIM: 96

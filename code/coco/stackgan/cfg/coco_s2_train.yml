@@ -1,0 +1,33 @@
+CONFIG_NAME: 'stageII'
+
+DATASET_NAME: 'coco'
+EMBEDDING_TYPE: 'cnn-rnn'
+GPU_ID: '0,1'
+Z_DIM: 100
+STAGE1_G: '/informatik3/wtm/home/hinz/Documents/Papers/multiple-object-generation/results/coco_stageI_2018_08_05_07_34_39/Model/checkpoint_0119.pth'
+IMG_DIR: "/data/hinz/data/coco/train/train2014"
+DATA_DIR: "/informatik3/wtm/home/hinz/Documents/Papers/multiple-object-generation/code/Multiple-Objects-GAN-COCO/coco"
+#DATA_DIR: '../../data/coco'
+IMSIZE: 256
+WORKERS: 16
+STAGE: 2
+USE_BBOX_LAYOUT: True
+TRAIN:
+    FLAG: True
+    BATCH_SIZE: 40
+    MAX_EPOCH: 120
+    LR_DECAY_EPOCH: 20
+    SNAPSHOT_INTERVAL: 10
+    DISCRIMINATOR_LR: 0.0002
+    GENERATOR_LR: 0.0002
+    COEFF:
+      KL: 2.0
+
+GAN:
+    CONDITION_DIM: 128
+    DF_DIM: 96
+    GF_DIM: 192
+    R_NUM: 2
+
+TEXT:
+    DIMENSION: 1024
