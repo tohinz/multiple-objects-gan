@@ -20,8 +20,8 @@ pip install -r requirements.txt
     - contains the three data sets used in the paper: normal (three digits per image), split_digits (0-4 in top half of image, 5-9 in bottom half), and bottom_half_empty (no digits in bottom half of the image)
     - [download](https://www.inf.uni-hamburg.de/en/inst/ab/wtm/research/software/multiple-objects-gan/data-multi-mnist.zip) our data, save it to `data/` and extract
 - CLEVR:
-    - Main: [download](https://www.inf.uni-hamburg.de/en/inst/ab/wtm/research/software/multiple-objects-gan/data-clevr-main.zip) our data, extract and save it to `data/`
-    - CoGenT: [download](https://www.inf.uni-hamburg.de/en/inst/ab/wtm/research/software/multiple-objects-gan/data-clevr-cogent.zip) our data, extract and save it to `data/`
+    - Main: [download](https://www.inf.uni-hamburg.de/en/inst/ab/wtm/research/software/multiple-objects-gan/data-clevr-main.zip) our data, save it to `data/` and extract
+    - CoGenT: [download](https://www.inf.uni-hamburg.de/en/inst/ab/wtm/research/software/multiple-objects-gan/data-clevr-cogent.zip) our data, save it to `data/` and extract
 - MS-COCO:
     - obtain the train and validation images from the 2014 split [here](http://cocodataset.org/#download), extract and save them in `data/coco/train/` and `data/coco/test/`
     - [download](https://www.inf.uni-hamburg.de/en/inst/ab/wtm/research/software/multiple-objects-gan/data-ms-coco.zip) our preprocessed data (bounding boxes and bounding box labels) and save it in `data/coco/train/` and `data/coco/test/`
