@@ -4,8 +4,8 @@ DATASET_NAME: 'coco'
 EMBEDDING_TYPE: 'cnn-rnn'
 GPU_ID: '0'
 Z_DIM: 100
-NET_G: '../output/coco_stageII_2018_07_30_21_45_11/Model/checkpoint_0110.pth'
-IMG_DIR: "/informatik3/wtm/datasets/External Datasets/coco_captions/val2014"
+NET_G: '../../../models/pretrained_model.pth'
+IMG_DIR: "../../../data/MS-COCO/test/val2014"
 DATA_DIR: '../../../data/MS-COCO'
 WORKERS: 4
 IMSIZE: 256

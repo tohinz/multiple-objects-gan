@@ -4,7 +4,7 @@ DATASET_NAME: 'coco'
 EMBEDDING_TYPE: 'cnn-rnn'
 GPU_ID: '0,1'
 Z_DIM: 100
-STAGE1_G: '../../../data/models/pretrained.pth'
+STAGE1_G: '../../../data/models/pretrained_model.pth'
 IMG_DIR: "../../../data/MS-COCO/train/train2014"
 DATA_DIR: '../../../data/MS-COCO'
 IMSIZE: 256
