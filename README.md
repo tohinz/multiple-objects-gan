@@ -26,7 +26,7 @@ pip install -r requirements.txt
     - obtain the train and validation images from the 2014 split [here](http://cocodataset.org/#download), extract and save them in `data/coco/train/` and `data/coco/test/`
     - [download](https://www.inf.uni-hamburg.de/en/inst/ab/wtm/research/software/multiple-objects-gan/data-ms-coco.zip) our preprocessed data (bounding boxes and bounding box labels) and save it in `data/coco/train/` and `data/coco/test/`
     - for the StackGAN architecture: obtain the preprocessed char-CNN-RNN text embeddings from [here](https://github.com/hanzhanggit/StackGAN-Pytorch)
-    - for the AttnGAN architecture: obtain the preprocessed preprocessed metadata and the pre-train DAMSM model from [here](https://github.com/taoxugit/AttnGAN)
+    - for the AttnGAN architecture: obtain the preprocessed metadata and the pre-trained DAMSM model from [here](https://github.com/taoxugit/AttnGAN)
 
 # Training
 - to start training run `sh train.sh mnist/clevr/coco-stackgan-1/coco-stackgan-2/coco-attngan 0,1` where you choose the desired data set and architecture (mnist, clevr, or coco) and which gpus to train on
