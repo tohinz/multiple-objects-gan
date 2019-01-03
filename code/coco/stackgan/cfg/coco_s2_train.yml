@@ -4,10 +4,9 @@ DATASET_NAME: 'coco'
 EMBEDDING_TYPE: 'cnn-rnn'
 GPU_ID: '0,1'
 Z_DIM: 100
-STAGE1_G: '/informatik3/wtm/home/hinz/Documents/Papers/multiple-object-generation/results/coco_stageI_2018_08_05_07_34_39/Model/checkpoint_0119.pth'
-IMG_DIR: "/data/hinz/data/coco/train/train2014"
-DATA_DIR: "/informatik3/wtm/home/hinz/Documents/Papers/multiple-object-generation/code/Multiple-Objects-GAN-COCO/coco"
-#DATA_DIR: '../../data/coco'
+STAGE1_G: '../../../data/models/pretrained.pth'
+IMG_DIR: "../../../data/MS-COCO/train/train2014"
+DATA_DIR: '../../../data/MS-COCO'
 IMSIZE: 256
 WORKERS: 16
 STAGE: 2

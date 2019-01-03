@@ -4,9 +4,8 @@ DATASET_NAME: 'coco'
 EMBEDDING_TYPE: 'cnn-rnn'
 GPU_ID: '0,1'
 Z_DIM: 100
-DATA_DIR: "/data/hinz/data/coco"
-IMG_DIR: "/data/hinz/data/coco/train/train2014"
-#DATA_DIR: '../../data/coco'
+IMG_DIR: "../../../data/MS-COCO/train/train2014"
+DATA_DIR: '../../../data/MS-COCO'
 IMSIZE: 64
 WORKERS: 12
 STAGE: 1
