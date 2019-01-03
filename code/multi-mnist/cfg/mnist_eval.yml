@@ -1,9 +1,8 @@
 DATASET_NAME: 'multi-mnist'
 GPU_ID: '0'
 Z_DIM: 100
-NET_G: '../../models/multi_mnist_0019.pth'
-DATA_DIR: "/informatik3/wtm/home/hinz/Documents/Papers/multiple-object-generation/code/Multiple-Objects-GAN-MNIST/Multi-MNIST/"
-#DATA_DIR: '../../data/Multi-MNIST'
+NET_G: '../../models/model-multi-mnist-0019.pth'
+DATA_DIR: '../../data/Multi-MNIST'
 WORKERS: 4
 IMSIZE: 64
 USE_BBOX_LAYOUT: True
