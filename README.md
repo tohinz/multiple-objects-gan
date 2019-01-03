@@ -29,7 +29,9 @@ pip install -r requirements.txt
     - for the AttnGAN architecture: obtain the preprocessed metadata and the pre-trained DAMSM model from [here](https://github.com/taoxugit/AttnGAN)
 
 # Training
-- to start training run `sh train.sh mnist/clevr/coco-stackgan-1/coco-stackgan-2/coco-attngan 0,1` where you choose the desired data set and architecture (mnist, clevr, or coco) and which gpus to train on
+- to start training run `sh train.sh data gpu-ids` where you choose the desired data set and architecture (mnist/clevr/coco-stackgan-1/coco-stackgan-2/coco-attngan) and which/how many gpus to train on
+- e.g. to train on the Multi-MNIST data set on one GPU: `sh train.sh mnist 0`
+- e.g. to train the AttnGAN architecture on the MS-COCO data set on three GPUs: `sh train.sh coco-attngan 0,1,2`
 
 # Evaluating
 - update the eval cfg file in `code/dataset/cfg/dataset_eval.yml` and adapt the path of `NET_G` to point to the model you want to use
