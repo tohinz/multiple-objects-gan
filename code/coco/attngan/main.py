@@ -118,11 +118,9 @@ if __name__ == "__main__":
         output_dir = args.resume
 
     split_dir, bshuffle = 'train', True
-    img_dir = os.path.join(cfg.DATA_DIR, split_dir, "train2014")
     eval = False
     if not cfg.TRAIN.FLAG:
         split_dir = 'test'
-        img_dir = os.path.join(cfg.DATA_DIR, split_dir, "val2014")
         eval = True
 
     # Get data loader
@@ -130,7 +128,7 @@ if __name__ == "__main__":
     image_transform = transforms.Compose([
             transforms.Resize((268, 268)),
             transforms.ToTensor()])
-    dataset = TextDataset(cfg.DATA_DIR, img_dir, split_dir,
+    dataset = TextDataset(cfg.DATA_DIR, cfg.IMG_DIR, split_dir,
                           base_size=cfg.TREE.BASE_SIZE,
                           transform=image_transform, eval=eval)
     assert dataset
