@@ -1,7 +1,7 @@
 CONFIG_NAME: 'attn2'
 
 DATASET_NAME: 'coco'
-DATA_DIR: '../../data/coco/coco_attn'
+DATA_DIR: '../../..//data/coco/coco'
 GPU_ID: '3'
 WORKERS: 1
 
@@ -12,7 +12,7 @@ TREE:
 
 TRAIN:
     FLAG: False
-    NET_G: '/informatik3/wtm/home/hinz/Git_Informatik/Multiple-Objects-GAN-Pytorch/coco_glu-gan2_2018_09_06_16_56_42/Model/checkpoint_0100.pth'
+    NET_G: '../../../models/model-ms-coco-attngan-0100.pth'
     B_NET_D: False
     BATCH_SIZE: 50
     NET_E: '../DAMSMencoders/coco/text_encoder100.pth'
