@@ -1,8 +1,8 @@
 CONFIG_NAME: 'glu-gan2'
 
 DATASET_NAME: 'coco'
-DATA_DIR: '/data/hinz/data/coco/coco_attn'
-GPU_ID: '0,1,2,3'
+DATA_DIR: '../../..//data/coco/coco'
+GPU_ID: '0,1,2'
 WORKERS: 20
 
 
