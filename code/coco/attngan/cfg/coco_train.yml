@@ -1,7 +1,7 @@
 CONFIG_NAME: 'glu-gan2'
 
 DATASET_NAME: 'coco'
-DATA_DIR: '../../..//data/coco/coco'
+DATA_DIR: '../../../data/coco/coco'
 IMG_DIR: "../../../data/MS-COCO/train/train2014"
 GPU_ID: '0,1,2'
 WORKERS: 20
