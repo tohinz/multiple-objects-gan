@@ -525,7 +525,6 @@ class condGANTrainer(object):
 
                 img = imgs[-1][0]
                 val_image = img.view(1, 3, imsize, imsize)
-                val_image = (val_image - 0.5) * 2
 
                 hidden = text_encoder.init_hidden(batch_size)
                 # words_embs: batch_size x nef x seq_len

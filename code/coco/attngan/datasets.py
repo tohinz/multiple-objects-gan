@@ -62,6 +62,7 @@ def prepare_data(data, eval=False):
         sorted_cap_lens = Variable(sorted_cap_lens)
 
     if eval:
+        bbox = bbox[sorted_cap_indices]
         return [real_imgs, captions, sorted_cap_lens, class_ids, keys, transformation_matrices, label, bbox]
     else:
         return [real_imgs, captions, sorted_cap_lens, class_ids, keys, transformation_matrices, label]
