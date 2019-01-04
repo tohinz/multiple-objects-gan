@@ -30,6 +30,7 @@ pip install -r requirements.txt
     - for the StackGAN architecture: obtain the preprocessed char-CNN-RNN text embeddings from [here](https://github.com/hanzhanggit/StackGAN-Pytorch) and put the files in `data/MS-COCO/train/` and `data/MS-COCO/test/`
     - for the AttnGAN architecture: obtain the preprocessed metadata and the pre-trained DAMSM model from [here](https://github.com/taoxugit/AttnGAN)
         - extract the preprocessed metadata and add the files downloaded in the first step (bounding boxes and bounding box labels) to the `data/coco/coco/train/` and `data/coco/coco/test/` folder 
+        - extract the downloaded DAMSM model and put the model files into `code/coco/attngan/DAMSMencoders`
 
 # Training
 - to start training run `sh train.sh data gpu-ids` where you choose the desired data set and architecture (mnist/clevr/coco-stackgan-1/coco-stackgan-2/coco-attngan) and which/how many gpus to train on
