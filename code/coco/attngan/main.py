@@ -153,8 +153,9 @@ if __name__ == "__main__":
     else:
         '''generate images from pre-extracted embeddings'''
         if cfg.B_VALIDATION:
-            algo.visualize_bbox(split_dir, num_samples=25, draw_bbox=True)
-            algo.sampling(split_dir)  # generate images for the whole valid dataset
+            # algo.visualize_bbox(split_dir, num_samples=25, draw_bbox=True)
+            # algo.sampling(split_dir)  # generate images for the whole valid dataset
+            algo.sample(split_dir, num_samples=25, draw_bbox=True)
         else:
             gen_example(dataset.wordtoix, algo, num_samples=30000)  # generate images for customized captions
     end_t = time.time()

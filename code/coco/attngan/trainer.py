@@ -471,14 +471,14 @@ class condGANTrainer(object):
                         fullpath = '%s_s%d.png' % (s_tmp, k)
                         im.save(fullpath)
 
-    def visualize_bbox(self, split_dir, num_samples=25, draw_bbox=False):
+    def sample(self, split_dir, num_samples=25, draw_bbox=False):
         from PIL import Image, ImageDraw, ImageFont
         import cPickle as pickle
         import torchvision
         import torchvision.utils as vutils
 
         if cfg.TRAIN.NET_G == '':
-            print('Error: the path for morels is not found!')
+            print('Error: the path for model NET_G is not found!')
         else:
             if split_dir == 'test':
                 split_dir = 'valid'
@@ -507,7 +507,7 @@ class condGANTrainer(object):
 
             # the path to save generated images
             s_tmp = model_dir[:model_dir.rfind('.pth')]
-            save_dir = '%s/%s' % (s_tmp, split_dir)
+            save_dir = '%s_%s' % (s_tmp, split_dir)
             mkdir_p(save_dir)
             #######################################
             noise = Variable(torch.FloatTensor(9, nz))
@@ -522,8 +522,6 @@ class condGANTrainer(object):
                     prepare_data(data, eval=True)
                 transf_matrices_inv = transformation_matrices[1][0].unsqueeze(0)
                 label_one_hot = label_one_hot[0].unsqueeze(0)
-                # print(label_one_hot.shape, transf_matrices_inv.shape)
-                # exit()
 
                 img = imgs[-1][0]
                 val_image = img.view(1, 3, imsize, imsize)
@@ -553,7 +551,7 @@ class condGANTrainer(object):
                 with torch.no_grad():
                     fake_imgs, _, mu, logvar = nn.parallel.data_parallel(netG, inputs, self.gpus)
 
-                data_img = torch.FloatTensor(20, 3, imsize, imsize).fill_(0)
+                data_img = torch.FloatTensor(10, 3, imsize, imsize).fill_(0)
                 data_img[0] = val_image
                 data_img[1:10] = fake_imgs[-1]
 
@@ -569,7 +567,7 @@ class condGANTrainer(object):
                         data_img[:10, :, y+h, x:x + w] = 1
                         data_img[:10, :, y:y + h, x + w] = 1
 
-                # write caption into image
+                # get caption
                 cap = captions[0].data.cpu().numpy()
                 sentence = ""
                 for j in range(len(cap)):
@@ -578,19 +576,8 @@ class condGANTrainer(object):
                     word = self.ixtoword[cap[j]].encode('ascii', 'ignore').decode('ascii')
                     sentence += word + " "
                 sentence = sentence[:-1]
-                text_img = Image.new('RGB', (imsize*10, imsize), color='white')
-                d = ImageDraw.Draw(text_img)
-                font = ImageFont.truetype("arial.ttf", 24)
-                d.text((10, 10), sentence, fill=(0, 0, 0), font=font)
-                text_img = torchvision.transforms.functional.to_tensor(text_img)
-                text_img = torch.chunk(text_img, 10, 2)
-                text_img = torch.cat([text_img[i].view(1, 3, imsize, imsize) for i in range(10)], 0)
-                data_img[10:] = text_img
-                if draw_bbox:
-                    vutils.save_image(data_img, '{}/bbox_vis_{}.png'.format(save_dir, step), normalize=True, nrow=10)
-                else:
-                    vutils.save_image(data_img, '{}/vis_{}.png'.format(save_dir, step), normalize=True, nrow=10)
-            print("Saved {} files to {}".format(step+1, save_dir))
+                vutils.save_image(data_img, '{}/{}_{}.png'.format(save_dir, sentence, step), normalize=True, nrow=10)
+            print("Saved {} files to {}".format(step, save_dir))
 
     def gen_example(self, data_dic):
         if cfg.TRAIN.NET_G == '':
