@@ -15,7 +15,7 @@ TRAIN:
     FLAG: False
     NET_G: '../../../models/model-ms-coco-attngan-0100.pth'
     B_NET_D: False
-    BATCH_SIZE: 50
+    BATCH_SIZE: 1
     NET_E: 'DAMSMencoders/coco/text_encoder100.pth'
 
 
