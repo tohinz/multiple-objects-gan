@@ -10,6 +10,7 @@ highlighter: rouge
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 title : Generating Multiple Objects at Spatially Distinct Locations
+tagline : Project Page
 author :
   name : Tobias Hinz
   github : tohinz
