@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Generating Multiple Objects at Spatially Distinct Locations
 ---
 
