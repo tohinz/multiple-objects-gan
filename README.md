@@ -14,10 +14,10 @@ pip install -r requirements.txt
 ```
 
 # Data
-- Multi-MNIST:
+- Multi-MNIST: adapted from [here](https://github.com/aakhundov/tf-attend-infer-repeat)
     - contains the three data sets used in the paper: normal (three digits per image), split_digits (0-4 in top half of image, 5-9 in bottom half), and bottom_half_empty (no digits in bottom half of the image)
     - [download](https://www2.informatik.uni-hamburg.de/wtm/software/multiple-objects-gan/data-multi-mnist.zip) our data, save it to `data/` and extract
-- CLEVR:
+- CLEVR: adapted from [here](https://github.com/facebookresearch/clevr-dataset-gen)
     - Main: [download](https://www2.informatik.uni-hamburg.de/wtm/software/multiple-objects-gan/data-clevr-main.zip) our data, save it to `data/` and extract
     - CoGenT: [download](https://www2.informatik.uni-hamburg.de/wtm/software/multiple-objects-gan/data-clevr-cogent.zip) our data, save it to `data/` and extract
 - MS-COCO:
