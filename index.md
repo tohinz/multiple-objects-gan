@@ -2,7 +2,7 @@
 ---
 
 # Introduction
->  **__[Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman): What I cannot create, I do not understand.__**
+>  **[Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman): What I cannot create, I do not understand.**
 
 One of the goals of generative models in machine learning is to model (and sample from) complex, unknown data distributions. As such, generating (and therefore modeling) images has become a popular task for generative models. This is mostly due to increased computing power and novel models (such as [Generative Adversarial Nets](http://papers.nips.cc/paper/5423-generative-adversarial-nets) and [Variational Autoencoders](https://arxiv.org/abs/1312.6114)) that are "good" a modeling images. Additionally, we have a lot of images available to us (i.e. lots of training data) and images represent a reasonably complex data distribution<sup>[1](#myfootnote1)</sup>.
 
