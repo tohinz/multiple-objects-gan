@@ -601,7 +601,7 @@ class condGANTrainer(object):
             model_dir = cfg.TRAIN.NET_G
             state_dict = \
                 torch.load(model_dir, map_location=lambda storage, loc: storage)
-            netG.load_state_dict(state_dict)
+            netG.load_state_dict(state_dict["netG"])
             print('Load G from: ', model_dir)
             netG.cuda()
             netG.eval()
