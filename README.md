@@ -5,6 +5,8 @@ Pytorch implementation for reproducing the results from the paper [Generating Mu
 
 > Our poster can be found [here](https://postersession.ai/)
 
+Have a look at our follow-up work [Semantic Object Accuracy for Generative Text-to-Image Synthesis](https://arxiv.org/abs/1910.13321) with available [code](https://github.com/tohinz/semantic-object-accuracy-for-generative-text-to-image-synthesis).
+
 ![Model-Architecture](examples/model.png)
 
 # Dependencies
