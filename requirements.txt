@@ -1,7 +1,7 @@
 backports.functools-lru-cache==1.5
 cloudpickle==0.6.1
 cycler==0.10.0
-dask==0.20.0
+dask==2021.10.0
 decorator==4.3.0
 easydict==1.9
 funcsigs==1.0.2
